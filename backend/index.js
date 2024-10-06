@@ -16,6 +16,14 @@ const PORT = 5000;
 const dotenv = require("dotenv");
 dotenv.config();
 
+app.use(
+  cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
+
 app.get("/", (req, res) => {
   res.send("backend is connected", {
     useNewUrlParser: true,
@@ -34,13 +42,7 @@ mongoose
 
 /* middleware */
 app.use(cors());
-app.use(
-  cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+
 app.use(morgan("dev"));
 app.use(
   bodyParser.urlencoded({
