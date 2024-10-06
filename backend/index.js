@@ -30,6 +30,9 @@ app.get("/", (req, res) => {
     useUnifiedTopology: true,
   });
 });
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
 
 mongoose
   .connect(process.env.MONGO_URL_CONNECTION)
