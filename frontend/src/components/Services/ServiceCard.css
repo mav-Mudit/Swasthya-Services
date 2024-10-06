@@ -1,0 +1,64 @@
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pred {
+  display: flex;
+  flex-direction: row;
+
+  padding: 30px;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 249, 249);
+}
+.apred {
+  text-decoration: none;
+  color: white;
+}
+#btnpred {
+  height: 50px;
+  margin: 30px;
+  border-radius: 10px;
+  border-color: rgb(58, 58, 221);
+  background-color: rgb(58, 58, 221);
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .pred {
+    flex-direction: column;
+  }
+}
+.card1 {
+  background-image: url(./service-1-dark.png);
+}
+
+.card2 {
+  background-image: url(./service-2-dark.png);
+}
+
+.card3 {
+  background-image: url(./service-3-dark.png);
+}
+
+.card4 {
+  background-image: url(./service-4-dark.png);
+}
+
+.card5 {
+  background-image: url(./service-5-dark.png);
+}
+
+.card6 {
+  background-image: url(./service-6-dark.png);
+}
+.py-5 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.apred:hover {
+  color: rgb(255, 255, 255);
+}

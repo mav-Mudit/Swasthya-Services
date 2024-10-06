@@ -1,0 +1,116 @@
+.navbar-brand {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  /* background-color: black; */
+  border-radius: 10px;
+}
+
+.material-icons {
+  position: relative;
+  top: 6px;
+}
+
+.nav-item {
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background-color: #0b5bd3;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  /* #650013; */
+}
+
+.solid {
+  border: 2px solid black;
+}
+
+/* For Pre-Loader */
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* vh means viewport height */
+  height: 100vh;
+  /* Bluish Color */
+  background-color: #77b3d4;
+  z-index: 1;
+}
+
+.airplane {
+  height: 220px;
+  animation: animated_airplane 1s ease infinite alternate;
+}
+
+.preloader p {
+  position: absolute;
+  top: 75%;
+  transform: translateY(-75%);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  transition: all 3s ease;
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3 {
+  height: 100px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.cloud-1 {
+  top: 25%;
+  transform: translate(100%, -25%);
+  animation: animated_clouds 3s ease infinite;
+}
+
+.cloud-2 {
+  top: 50%;
+  transform: translate(100%, -50%);
+  animation: animated_clouds 3s ease infinite 2s;
+}
+
+.cloud-3 {
+  top: 75%;
+  transform: translate(100%, -75%);
+  animation: animated_clouds 3s ease infinite 1.5s;
+}
+
+/* Animation for Airplane */
+@keyframes animated_airplane {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+/* Animation for Clouds */
+@keyframes animated_clouds {
+  from {
+    right: 0%;
+  }
+  to {
+    /* We need to move it off the screen so do this */
+    right: 130%;
+  }
+}
+
+.preloader-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+.logo-img {
+  width: 250px;
+  height: auto;
+  color: white;
+  /* Add more styles as needed */
+}
